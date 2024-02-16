@@ -1,0 +1,23 @@
+\begin{notes}
+      Basics of Tensors and Homological Algebra (Matsumura Appendix A)
+\end{notes}
+\hrule
+
+\begin{enumerate}
+      \item
+            $\hom_A(M\otimes_A N,L)\simeq\mathscr{L}(M,N;L)$. This follows from the definition of tensor products.
+            Here, $g$ is an $A$-linear map and $\varphi \in \mathscr{L}(M,N;L)$ (the set of bilinear maps).
+            \begin{equation*}
+                  \begin{tikzcd}[]
+                        & M \otimes_A N \arrow[dd,"g"] \\
+                        M \times N \arrow[ur, "\otimes_A"] \ar[dr, "\varphi"] &\\
+                        & L
+                  \end{tikzcd}
+            \end{equation*}
+      \item
+            $(M\otimes_A M')\otimes_A M''=M\otimes_A M'\otimes_A M''=M\otimes_A(M'\otimes_A M'')$ (Associativity);
+            $M\otimes_A N =N \otimes_A M$ (Commutativity); $M\otimes_A A = M$;
+            $(\bigoplus_\lambda M_\lambda)\otimes_A N=\bigoplus_\lambda(M_\lambda\otimes_A N)$
+            (Distributivity with direct sum).
+      \item $(f\otimes g)(\sum_i{x_i\otimes y_i})=\sum_i{f(x_i)\otimes g(y_i)}$.
+\end{enumerate}

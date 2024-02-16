@@ -1,0 +1,23 @@
+%% \union - Example: \union{j \in J}{A_j}
+\newcommand{\union}[2]{\underset{#1}\bigcup #2}
+
+%% \inter - like \union, but with \bigcap
+\newcommand{\inter}[2]{\underset{#1}\bigcap #2}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+\newcommand{\rad}{\textrm{rad }}
+\renewcommand{\hom}{\textrm{Hom}}
+\newcommand{\maxm}{\mathfrak{m}}
+\newcommand{\rom}{\mathbf{R}^m}
+\newcommand{\ron}{\mathbf{R}^n}
+\newcommand{\rl}{\mathbf{R}}
+
+\newtheorem{notes}{Notes}[section]
+\newtheorem{prob}[notes]{Problems}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{defn}[notes]{Definition}
+\newtheorem{rem}[notes]{Remark}
+\newtheorem{prop}[thm]{Proposition}
+
