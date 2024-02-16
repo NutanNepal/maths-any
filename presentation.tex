@@ -1,0 +1,263 @@
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{mathtools}
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Schemes]{Introduction to Schemes} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Nutan Nepal} % Your name
+\institute[North Carolina State University] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+North Carolina State University \\ % Your institution for the title page
+\medskip
+\textit{nnepal2@ncsu.edu} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Spectrum of a ring} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Spectrum of a ring}
+Definition: The spectrum of a ring Spec$(R)$ is the set of all prime ideals of
+the commutative ring $R$. For example:
+
+\begin{itemize}
+    \item[-] For a field $k$, Spec($k$) is a one point set $(0)$.
+    \item[-] Spec($\mathbb{Z}$) is the set $\{(0), (p)\}$ for all primes $p$.
+\end{itemize}
+
+We can define the Zariski topology on Spec($R$) by defining closed sets to be of the form
+
+$$V(\mathfrak{a}) =
+    \{\mathfrak{p}\in \text{Spec}(R):\ \mathfrak{p} \supset \mathfrak{a}\}.$$
+
+With this, Spec($R$) becomes a topological space. The open sets of the form
+$D(f)= $ Spec$(R)-V((f)); f\in R$ are called distinguished open sets.
+
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+\section{Sheaves} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+\subsection{Presheaves} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+\begin{frame}
+\frametitle{Presheaf}
+Definition: A presheaf $\mathcal{F}$ on a topological space $X$ consists of following data:
+\begin{enumerate}
+    \item For each open set $\mathcal{U}\subset X$ we have a set $\mathcal{F}(\mathcal{U})$.
+        Elements of $\mathcal{F}(\mathcal{U})$ are called sections of $\mathcal{F}$
+        over $\mathcal{U}$.
+
+    \item For each inclusion $\mathcal{U}\xhookrightarrow{\quad} \mathcal{V}$, we have the restriction
+        $$\text{res}_{\mathcal{V},\mathcal{U}}: \mathcal{F}(\mathcal{V})\longrightarrow
+        \mathcal{F}(\mathcal{U})$$
+        that satisfies:
+        \begin{itemize}
+            \item $ \text{res}_{\mathcal{U},\mathcal{U}} = \text{id}_{\mathcal{F}(\mathcal{U})}$, and
+            \item if $\mathcal{U}\xhookrightarrow{\quad} \mathcal{V}\xhookrightarrow{\quad}
+                \mathcal{W}$ is are inclusions of open sets we have 
+                $$\text{res}_{\mathcal{V},\mathcal{U}}
+                \circ\text{res}_{\mathcal{W},\mathcal{V}} = \text{res}_{\mathcal{W},\mathcal{U}}.$$
+        \end{itemize}
+\end{enumerate}
+
+In other words, a presheaf is a contravariant functor on the poset of open sets of $X$.
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Sheaf}
+    Definition: A sheaf $\mathcal{F}$ on a topological space $X$
+    is a presheaf that satisfies:
+    \begin{enumerate}
+        \item Gluability axiom: If $\{\mathcal{U}_i\}$ is an open cover of $\mathcal{U}$,
+            then given $f_i\in \mathcal{F}(\mathcal{U}_i)$ such that
+            $$\text{res}_{\mathcal{U}_i,\ \mathcal{U}_i\cap\mathcal{U}_j}(f_i)=
+            \text{res}_{\mathcal{U}_j,\ \mathcal{U}_i\cap\mathcal{U}_j}(f_j)$$
+            there exists $f\in \mathcal{U}$ that satisfies $\text{res}_{\mathcal{U},\mathcal{U}_i}
+            (f)=f_i$.
+    
+        \item Identity axiom: If $\{\mathcal{U}_i\}$ is an open cover of $\mathcal{U}$,
+            then given $f_1, f_2\in \mathcal{F}(\mathcal{U})$ such that
+            $$\text{res}_{\mathcal{U},\mathcal{U}_i}(f_1)=
+            \text{res}_{\mathcal{U},\mathcal{U}_j}(f_2)$$
+            for all $i, j$ then $f_1 = f_2$.
+    \end{enumerate}
+    Here, gluability axiom says that there is at least one way to glue compatible sections
+    and identity axiom says that there is at most one such gluing.
+    
+    \end{frame}
+    
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Examples}
+
+    \begin{block}{Functions on a topological space}
+        Given a topological space $X$, we can take $\mathcal{F}(X)$ to be the continuous,
+        smooth, real or complex valued functions on $X$ and res to be the usual restriction
+        map between sets. Then $\mathcal{F}$ is a sheaf on $X$.
+    \end{block}
+
+    \begin{block}{Skyscraper Sheaf}
+        If $p\in X$ is a point and $S$ is any set, we define
+        $$\mathcal{F}(U)=\begin{dcases}
+            S \quad \ \ \ p\in U,\\
+            \{e\}\quad p\notin U.
+        \end{dcases}$$
+        where $\{e\}$ is any one point set.
+    \end{block}
+
+\end{frame}
+    
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Stalks}
+    Definition: The stalk of a presheaf $\mathcal{F}$ at a point
+    $p\in X$ is the set of all germs at $p$. That is, it is the set
+    $$\{(f; U) : p \in U; f \in \mathcal{F}(U)\}$$
+    modulo the relation that $(f; U) \sim (g; V)$ if there is some open set $W\subset
+    U, V$ where $p \in W$ and res$_{U;W} (f) = $ res$_{V;W}(g)$.
+\end{frame}
+
+
+
+%------------------------------------------------
+\section{Locally Ringed Spaces}
+\subsection{Examples}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Ringed Spaces and Locally Ringed Spaces}
+    Definition: Given a sheaf of rings $\mathcal{O}_X$ on $X$, $(X,\mathcal{O}_X)$ is
+    called a ringed space.\\
+    A locally ringed space $(X,\mathcal{O}_X)$ is a ringed space if the stalk
+    of $\mathcal{O}_X$ at every point $p\in X$ is a local ring.
+
+    \begin{itemize}
+        \item[-] A morphism of locally ringed spaces $(X,\mathcal{O}_X)
+        \longrightarrow (Y,\mathcal{O}_Y)$ constitutes of the continuous map of
+        topological spaces $f: X\to Y$ and morphisms of the structure sheaves.
+    \end{itemize}
+
+    For example: manifolds with sheaves of smooth functions are locally ringed spaces.
+
+    Given the topological space Spec($R$), there is a construction where we
+    consider $\mathcal{O}_{\text{Spec} R}(D(f))= R_f$, the localization of the ring
+    $R$ at the multiplicative set $\{1, f, f^2, \ldots\}$. With this, we obtain another
+    locally ringed space $(R, \mathcal{O}_{\text{Spec} R})$.
+\end{frame}
+
+%------------------------------------------------
+\section{Affine Schemes}
+\subsection{Schemes}
+\subsection{Examples}
+
+%------------------------------------------------
+\begin{frame}
+    \frametitle{Schemes}
+        Affine Schemes: A locally ringed space which is isomorphic to $(R, \mathcal{O}_{\text{Spec} R})$
+        for some commutative ring $R$ is called an affine scheme.
+        
+        \vspace*{5mm}
+
+        Scheme: A locally ringed space is called a scheme if it has an open
+        covering by affine schemes.
+    \end{frame}
+%------------------------------------------------
+
+
+\begin{frame}
+\Huge{\centerline{The End}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
