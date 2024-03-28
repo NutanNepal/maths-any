@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}% Change the margins here if you wish.
+\setlength{\parindent}{0pt} % This is the set the indent length for new paragraphs, change if you want.
+\setlength{\parskip}{5pt} % This sets the distance between paragraphs, which will be used anytime you have a blank line in your LaTeX code.
+\pagenumbering{gobble}% This means the page will not be numbered. You can comment it out if you like page numbers.
+
+%------------------------------------
+
+% These packages allow the most of the common "mathly things"
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{sectsty}
+
+% This package allows you to add images.
+\usepackage{graphicx, tikz-cd, adjustbox}
+\usepackage{float}
+
+% These are theorem environments.  This should cover everything you need, and you should be able to tell what environment goes with what type of result, but please let me know if I've missed anything.
+\newtheoremstyle{mytheoremstyle} % name
+    {\topsep}                    % Space above
+    {\topsep}                    % Space below
+    {}                   % Body font
+    {}                           % Indent amount
+    {\bf}                   % Theorem head font
+    {.}                          % Punctuation after theorem head
+    {.5em}                       % Space after theorem head
+    {}  % Theorem head spec (can be left empty, meaning ‘normal’)
+
+\theoremstyle{mytheoremstyle}
+
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem*{examples}{Examples}
+\newtheorem{classtheorem}{Theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{challenge}[theorem]{Challenge}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\sectionfont{\fontsize{14}{15}\selectfont}
+\subsectionfont{\fontsize{12}{15}\selectfont}
+
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bM}{\mathcal{M}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bQ}{\mathbb{Q}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\al}{\alpha}
+\newcommand{\li}{l^{\infty}}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\de}{\delta}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\linf}{l^{\infty}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cN}{\mathcal{N}}
+ 
+%These help to format the names of the results the way we are in class and in notes.
+%\renewcommand*{\proposition}{\Roman{section}.\arabic{theorem}}
+\renewcommand*{\thetheorem}{\arabic{section}.\arabic{theorem}}
+\renewcommand*{\theclasstheorem}{\Alph{theorem}}
+\renewcommand*{\thechallenge}{\arabic{section}.\arabic{theorem}}
+\renewcommand*{\thequestion}{\arabic{section}.\arabic{theorem}}
+\renewcommand*{\theproblem}{\arabic{section}.\arabic{theorem}}
+% Put the name of your paper here. It does not need to be a fancy name, but should tell the reader what is contained in the paper.
+\title{Flat Modules}
+
+% You are the author, put your name here.
+\author{Nutan Nepal}
+
+% You can change the date to be something other than the current date if you want.
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\makebox[\linewidth]{\rule{200mm}{1pt}}
+\vspace{1mm}
+\section*{Introduction}
+\ \ \ For any $A-$module $M$, every short exact sequence
+$0\longrightarrow N'\longrightarrow N\longrightarrow N''
+\longrightarrow 0$ of $A-$ modules induces the exact sequence
+$ N'\otimes M\longrightarrow N\otimes M
+\longrightarrow N''\otimes M\longrightarrow 0$.
+An $A-$module $M$ is flat if for every short exact sequence
+$\mathcal{S}:$
+$0\longrightarrow N'\longrightarrow N\longrightarrow N''
+\longrightarrow 0$, the induced sequence $\mathcal{S}\otimes M:$ 
+$$0\longrightarrow N'\otimes M\longrightarrow N\otimes M
+\longrightarrow N''\otimes M\longrightarrow 0$$
+is also exact. $M$ is called faithfully flat if we have:
+$\mathcal{S}\text{ exact}\iff \mathcal{S}\otimes M \text{ exact}.$
+A ring homomorphism $f:R \to S$ is called flat (resp. faithfully flat)
+if $S$ is flat (resp. faithfully flat) as
+an $R-$module.
+
+\subsection*{Examples and facts:}
+\begin{enumerate}
+    \item Projective modules are flat. Injective modules need not be flat
+        and flat modules need not be projective or injective.
+    \item $\mathbb{Z}$ is a projective (and hence, flat) $\bZ-$module.
+        In general, $-\otimes_A A$ is the identity endofunctor
+        the category of $A-$modules
+        i.e. $\cS\otimes_A A = \cS$ and so, $A$ is always a flat $A-$module.
+    \item The localization $S^{-1}N$ of an $A-$module $N$ by the multiplicative
+        set $S$ of $A$ is an exact functor . So $A\to S^{-1}A$ is a flat ring
+        morphism.
+    \item $\bQ$ is a flat $\bZ-$module. ($\bQ$ is also an injective
+        $\bZ-$module)
+    \item Flat modules are torsion-free. Hence, the $\bZ-$modules
+        $\bZ/n\bZ$ and $\bQ/\bZ$ (which is injective) are not flat.
+    \item The direct sum of flat modules are flat (since the tensor
+        product commutes with arbitrary direct sums). In particular,
+        the $\bZ-$module $\bQ\oplus\bZ$ (which is neither projective
+        nor injective) is flat.
+    \item The localization $S^{-1}N$ of an $A-$module $N$ by the multiplicative
+        set $S$ of $A$ is an exact functor . So $A\to S^{-1}A$ is a flat ring
+        morphism.
+    \item Flatness is preserved by change of base ring:
+        If $M$ is a flat $B-$module and $B\to A$ is a ring morphism,
+        then $M\otimes_B A$ is a flat $A-$module.
+    \item Flatness is preserved by composition:
+        If $A$ is a flat $B-$algebra and $M$ is a flat $A-$module, then
+        $M$ is also $B-$flat.
+    \item Flatness is a local property:
+        An $A-$module $M$ is $A-$flat if and only if $M_\mathfrak{p}$
+        is $A_\mathfrak{p}-$flat for all prime ideals $\mathfrak{p}
+        \subset A$.
+\end{enumerate}
+
+In the study algebraic sets, we can consider a family of varieties as
+follows: using the coordinate ring $R$ of a variety $Y$ and a collection
+of polynomials $f_i(x_1,\ldots,x_n)\in R[x_1,\ldots,x_n]$, we consider
+the varieties $V(f_i(x,b))=\{a\in \mathbb{A}^n_k|\ f_i(a,b)=0\}$ to be
+a family for each $b\in Y$ (i.e. the families are parametrized by $Y$).
+
+% These set the counters for the section (of our notes; so section 1 is rhombuses, section 2 is kites, etc.) and theorem (or problem, challenge, etc.)  If you are only presenting a piece of a theorem that is not the first piece, you'll need to uncomment the last counter and adjust it appropriately.
+\setcounter{section}{1}
+\setcounter{theorem}{1}
+
+\end{document}
