@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.22)  29 MAR 2024 18:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.8.22)  5 APR 2024 10:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -543,20 +543,22 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 ) [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 188.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 190.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [3] [4] [5] (./project.aux) ) 
+) [3]
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 262.
+ [4] [5] (./project.aux) ) 
 Here is how much of TeX's memory you used:
- 16911 strings out of 478268
- 341594 string characters out of 5846347
- 614883 words of memory out of 5000000
- 34795 multiletter control sequences out of 15000+600000
- 480045 words of font info for 71 fonts, out of 8000000 for 9000
+ 16934 strings out of 478268
+ 341924 string characters out of 5846347
+ 614884 words of memory out of 5000000
+ 34816 multiletter control sequences out of 15000+600000
+ 482635 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,8n,103p,527b,217s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,9n,103p,527b,217s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on project.pdf (5 pages, 135793 bytes).
+Output written on project.pdf (5 pages, 139751 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
