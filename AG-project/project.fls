@@ -176,6 +176,19 @@ INPUT e:/texlive/2019/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT e:/texlive/2019/texmf-dist/tex/latex/varwidth/varwidth.sty
 INPUT e:/texlive/2019/texmf-dist/tex/latex/float/float.sty
 INPUT e:/texlive/2019/texmf-dist/tex/latex/float/float.sty
+INPUT e:/texlive/2019/texmf-dist/tex/latex/scalerel/scalerel.sty
+INPUT e:/texlive/2019/texmf-dist/tex/latex/scalerel/scalerel.sty
+INPUT e:/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
+INPUT e:/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
+INPUT e:/texlive/2019/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT e:/texlive/2019/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT e:/texlive/2019/texmf-dist/tex/latex/stackengine/stackengine.sty
+INPUT e:/texlive/2019/texmf-dist/tex/latex/stackengine/stackengine.sty
+INPUT e:/texlive/2019/texmf-dist/tex/generic/listofitems/listofitems.sty
+INPUT e:/texlive/2019/texmf-dist/tex/generic/listofitems/listofitems.sty
+INPUT e:/texlive/2019/texmf-dist/tex/generic/listofitems/listofitems.tex
+INPUT e:/texlive/2019/texmf-dist/tex/latex/wasysym/wasysym.sty
+INPUT e:/texlive/2019/texmf-dist/tex/latex/wasysym/wasysym.sty
 INPUT d:/Documents/GitHub/maths-any-2021/AG-project/project.aux
 INPUT d:/Documents/GitHub/maths-any-2021/AG-project/project.aux
 OUTPUT d:/Documents/GitHub/maths-any-2021/AG-project/project.aux
@@ -219,6 +232,11 @@ INPUT e:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT e:/texlive/2019/texmf-dist/tex/latex/wasysym/uwasy.fd
+INPUT e:/texlive/2019/texmf-dist/tex/latex/wasysym/uwasy.fd
+INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
+INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
+INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/wasy/wasy7.tfm
 INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
@@ -239,6 +257,9 @@ INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
+INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/wasy/wasy8.tfm
+INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/wasy/wasy6.tfm
 INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 OUTPUT d:/Documents/GitHub/maths-any-2021/AG-project/project.pdf
 INPUT e:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map
@@ -249,6 +270,7 @@ INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT e:/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT d:/Documents/GitHub/maths-any-2021/AG-project/project.aux
 INPUT e:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT e:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT e:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT e:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT e:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
@@ -257,4 +279,5 @@ INPUT e:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT e:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT e:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT e:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
+INPUT e:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT e:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
