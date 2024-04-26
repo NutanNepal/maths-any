@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1712326453 "/Users/nnepal2/Documents/GitHub/maths-any-2021/AG-project/project.tex" "project.pdf" "project" 1712326454
-  "/Users/nnepal2/Documents/GitHub/maths-any-2021/AG-project/project.tex" 1712326453 13466 a4ca8c5a92fe913f9498f353e68a7d95 ""
+["pdflatex"] 1712632438 "/Users/nnepal2/Documents/GitHub/maths-any-2021/AG-project/project.tex" "project.pdf" "project" 1712632439
+  "/Users/nnepal2/Documents/GitHub/maths-any-2021/AG-project/project.tex" 1712632437 14771 70be141317024357a268ea5a79c47fe8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -160,8 +160,8 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1661220138 2826444 081ba588ee80b15065a3c3e9cafd23b9 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "project.aux" 1712326454 636 b00fe54c60a24d39ba0969735df37377 "pdflatex"
-  "project.tex" 1712326453 13466 a4ca8c5a92fe913f9498f353e68a7d95 ""
+  "project.aux" 1712632439 636 7ed32f70f427e2c2eba67ec8dd79c208 "pdflatex"
+  "project.tex" 1712632437 14771 70be141317024357a268ea5a79c47fe8 ""
   (generated)
   "project.aux"
   "project.log"

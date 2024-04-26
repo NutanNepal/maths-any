@@ -118,6 +118,35 @@ the subschemes i.e. on the morphisms of the subschemes.
     zero-dimensional.$\blacktriangle$
 \end{example}
 
+\begin{tikzpicture}[scale=.7]
+    \begin{scope}
+    \clip (20,0) rectangle (40,8); % Clips the picture...
+    \pgftransformcm{1.4}{0}{2}{0.8}{\pgfpoint{0cm}{0cm}} % This is actually the transformation
+                                                         %  matrix entries that gives the slanted
+                                                         % unit vectors. You might check it on
+                                                         % MATLAB etc. . I got it by guessing.
+    \foreach \x in {0,1,...,20}{                           % Two indices running over each
+        \foreach \y in {0,1,...,20}{                       % node on the grid we have drawn 
+        \node[draw,circle,inner sep=1pt,fill] at (2* \x,\y) {}; % Places a dot at those points
+        }
+    }
+    \draw[style=help lines,thin] (0,0) grid[step=1cm] (40,40);
+    \draw[gray, thin] (10,0) -- (10,10);
+    \end{scope}
+\end{tikzpicture}
+
+
+\vspace*{5mm}
+\begin{tikzpicture}
+    \draw[gray, thick] (0,0) -- (8,2);   
+    \draw[gray, thick] (0,0) -- (5,0);
+    \draw[gray, thick] (5,0) -- (13,2);
+    \draw[gray, thick] (13,2) -- (8,2);
+    \draw[red] (0,0) -- ([xshift=3pt] 1,1);
+    \filldraw[black] (0,0) circle (2pt) node[anchor=west]{};
+    %\pgftransformcm{1.4}{0}{2}{0.8}{\pgfpoint{0cm}{0cm}}
+    \end{tikzpicture}
+
 \hspace*{8mm}Hence, a morphism of varieties $f:X\to Y$ itself defines a family of subvarieties
 of the source parametrized by the target. The families where the
 fibers vary ``nicely'' are called \textbf{flat families} and these
@@ -137,12 +166,12 @@ between two schemes.
 
 \section{Flat modules and flat maps}
 
-\hspace*{8mm}For any $A-$module $M$, every short exact sequence
+\hspace*{8mm}For any $A$-module $M$, every short exact sequence
 $0\longrightarrow N'\longrightarrow N\longrightarrow N''
 \longrightarrow 0$ of $A-$ modules induces the exact sequence
 $ N'\otimes M\longrightarrow N\otimes M
 \longrightarrow N''\otimes M\longrightarrow 0$.
-An $A-$module $M$ is flat if for every short exact sequence
+An $A$-module $M$ is flat if for every short exact sequence
 $\mathcal{S}:$
 $0\longrightarrow N'\longrightarrow N\longrightarrow N''
 \longrightarrow 0$, the induced sequence $\mathcal{S}\otimes M:$ 
@@ -152,87 +181,87 @@ is also exact. $M$ is called faithfully flat if we have:
 $\mathcal{S}\text{ exact}\iff \mathcal{S}\otimes M \text{ exact}.$
 A ring homomorphism $f:R \to S$ is called flat (resp. faithfully flat)
 if $S$ is flat (resp. faithfully flat) as
-an $R-$module.
+an $R$-module.
 
 \subsection*{Examples and facts:}
 \begin{enumerate}
     \item Projective modules are flat. Injective modules need not be flat
         and flat modules need not be projective or injective.
-    \item $\mathbb{Z}$ is a projective (and hence, flat) $\bZ-$module.
+    \item $\mathbb{Z}$ is a projective (and hence, flat) $\bZ$-module.
         In general, $-\otimes_A A$ is the identity endofunctor
-        the category of $A-$modules
+        the category of $A$-modules
         i.e. $\cS\otimes_A A = \cS$ and so,
-        $A$ is always a flat $A-$module.
-    \item The localization $S^{-1}N$ of an $A-$module $N$ by the multiplicative
+        $A$ is always a flat $A$-module.
+    \item The localization $S^{-1}N$ of an $A$-module $N$ by the multiplicative
         set $S$ of $A$ is an exact functor . So $A\to S^{-1}A$ is a flat ring
         morphism.
-    \item $\bQ$ is a flat $\bZ-$module. ($\bQ$ is also an injective
-        $\bZ-$module)
-    \item Flat modules are torsion-free. Hence, the $\bZ-$modules
+    \item $\bQ$ is a flat $\bZ$-module. ($\bQ$ is also an injective
+        $\bZ$-module)
+    \item Flat modules are torsion-free. Hence, the $\bZ$-modules
         $\bZ/n\bZ$ and $\bQ/\bZ$ (which is injective) are not flat.
     \item Finitely generated modules over principal ideal domains are
         flat if and only if they are torsion-free if and only if they
         are free.
     \item The direct sum of flat modules are flat (since the tensor
         product commutes with arbitrary direct sums). In particular,
-        the $\bZ-$module $\bQ\oplus\bZ$ (which is neither projective
+        the $\bZ$-module $\bQ\oplus\bZ$ (which is neither projective
         nor injective) is flat.
-    \item The localization $S^{-1}N$ of an $A-$module $N$ by the multiplicative
+    \item The localization $S^{-1}N$ of an $A$-module $N$ by the multiplicative
         set $S$ of $A$ is an exact functor. So $A\to S^{-1}A$ is a flat ring
         morphism.
     \item Flatness is preserved by change of base ring:
-        If $M$ is a flat $B-$module and $B\to A$ is a ring morphism,
-        then $M\otimes_B A$ is a flat $A-$module.
+        If $M$ is a flat $B$-module and $B\to A$ is a ring morphism,
+        then $M\otimes_B A$ is a flat $A$-module.
     \item Flatness is preserved by composition:
-        If $A$ is a flat $B-$algebra and $M$ is a flat $A-$module, then
+        If $A$ is a flat $B-$algebra and $M$ is a flat $A$-module, then
         $M$ is also $B-$flat.
     \item Flatness is a local property:
-        An $A-$module $M$ is $A-$flat if and only if $M_\mathfrak{p}$
+        An $A$-module $M$ is $A-$flat if and only if $M_\mathfrak{p}$
         is $A_\mathfrak{p}-$flat for all prime ideals $\mathfrak{p}
         \subset A$.
-    \item An $A-$module $M$ is $A-$flat if and only if for all ideals $I$
+    \item An $A$-module $M$ is $A-$flat if and only if for all ideals $I$
         of $A$, we have $I\otimes M\cong IM$.
 \end{enumerate}
 
 \section{Quasicoherent sheaves and flat morphisms}
 \hspace*{8mm}Given a ring $R$ and an 
-$R-$module $M$, we can form a sheaf of abelian
+$R$-module $M$, we can form a sheaf of abelian
 groups $\widetilde{M}$ on $X= \spec R$ by taking $\widetilde{M}(D(f))
 = M\otimes f^{-1}R = f^{-1}M$, which is the localization of $M$ by the
 multiplicative set $\{1,f,f^2,\ldots\}$, and then extending to
 all the open sets. The sheaf $\widetilde{M}$
-has the structure of an $\cO_X-$module.
+has the structure of an $\cO_X$-module.
 
 \begin{enumerate}
 
     \item A sheaf $\cF$ on $X$ is called \textbf{quasicoherent} if for each affine
         open subset Spec $A$ of $X$, the sheaf $\cF\mid_{\spec A}$
-        is isomorphic to $\widetilde{M}$ for some $A-$module $M$.
+        is isomorphic to $\widetilde{M}$ for some $A$-module $M$.
         The category of quasicoherent sheaves over an affine
-        scheme $\spec A$ is equivalent to the category of $A-$modules:
+        scheme $\spec A$ is equivalent to the category of $A$-modules:
         $\mathcal{QC}oh_{\spec A} \tilde{\longleftrightarrow}
         \mathfrak{mod}_A$.
     
     \item A \textbf{quasicoherent sheaf} $\cF$ on $X$ is said to be
         \textbf{flat} at $p\in X$
-        if $\cF_p$ is a flat $\cO_{X,p}-$module.
+        if $\cF_p$ is a flat $\cO_{X,p}$-module.
         A \textbf{quasicoherent sheaf} $\cF$ on $X$ is said to be
         \textbf{flat} over $X$
         if for every point $p\in X$, $\cF_p$ is a flat
-        $\cO_{X,p}-$module.
+        $\cO_{X,p}$-module.
 
     \item A morphism $f:X\to Y$ of schemes is said to be \textbf{flat}
         at $p\in X$ if $\cO_{X,p}$ is a flat
-        $\cO_{Y,f(p)}-$module.
+        $\cO_{Y,f(p)}$-module.
         A morphism $f:X\to Y$ of schemes is called a \textbf{flat
         morphism} if for every $p\in X$, $\cO_{X,p}$ is a flat
-        $\cO_{Y,f(p)}-$module.
+        $\cO_{Y,f(p)}$-module.
         A morphism is called \textbf{faithfully flat} if it is both
         flat and surjective.
 
         In particular, if $Y=\mspec A$, a morphism (or family)
         of schemes
-        $f:X\to Y$ is flat if $\cO(U)$ is a flat $A-$module for every
+        $f:X\to Y$ is flat if $\cO(U)$ is a flat $A$-module for every
         open set $U\subset X$.
 
 \end{enumerate}
@@ -248,7 +277,7 @@ has the structure of an $\cO_X-$module.
     \item A morphism of rings $A\to B$ is flat if and only if the
         corresponding morphism of schemes $\spec B\to\spec A$.
         More generally, if $B\to A$ is a ring homomorphism and $M$ is
-        an $A-$module, then $M$ is $B-$flat if and only if
+        an $A$-module, then $M$ is $B-$flat if and only if
         $\widetilde{M}$ is flat over $\spec B$.
     \item The fibers of a flat morphism of varieties $f:X\to Y$ all
         all have the same dimension dim $X-$ dim $Y$. 
@@ -264,12 +293,12 @@ has the structure of an $\cO_X-$module.
 $\mathfrak{mod}_A\to\mathfrak{mod}_A$
 of the right-exact covariant functor
 $M\otimes\cdot$ (meaning $\tor^A_0(M,N)
-=M\otimes N$ for all $A-$modules $N$).
-For an $A-$module $M$, the following are equivalent:
+=M\otimes N$ for all $A$-modules $N$).
+For an $A$-module $M$, the following are equivalent:
 \begin{enumerate}
     \item[i.] $M$ is a flat $A-$ module.
-    \item[ii.] $\tor^A_i(M,N)=0$ for all $i>0$ and $A-$module N.
-    \item[iii.] $\tor^A_1(M,N)=0$ for all $A-$module N.
+    \item[ii.] $\tor^A_i(M,N)=0$ for all $i>0$ and $A$-module N.
+    \item[iii.] $\tor^A_1(M,N)=0$ for all $A$-module N.
 \end{enumerate}
 
 Tor stands for torsion as seen in the following example:
@@ -288,7 +317,7 @@ Tor stands for torsion as seen in the following example:
 \subsection{Examples and facts}
 \begin{enumerate}
     \item (\textbf{ideal-theoretic criterion for flatness}) An
-    $A-$module $M$ is flat if and only if $\tor^A_1(M,A/I)=0$
+    $A$-module $M$ is flat if and only if $\tor^A_1(M,A/I)=0$
     for any ideal $I$.
 \end{enumerate}
 
